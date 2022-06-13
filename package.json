@@ -1,5 +1,5 @@
 {
-  "name": "traning_counter",
+  "name": "training_counter",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "element-plus": "^2.2.5",
     "vue": "^3.0.0"
   },
   "devDependencies": {
