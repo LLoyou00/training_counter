@@ -40,7 +40,7 @@
     <div class="row">
       <div class="label">小节计数:</div>
       <div class="value">
-        <span class="number">{{ section_count }}</span>
+        <el-input-number v-model="section_count" />
       </div>
     </div>
 
@@ -52,7 +52,7 @@
     </div>
 
     <div class="operation">
-      <el-button type="primary" size="large" @click="countdown_switch = 1">
+      <el-button type="primary" size="large" @click="sectionTimingHandle">
         小 节 计 时
       </el-button>
     </div>
@@ -104,6 +104,13 @@ export default defineComponent({
       clearInterval(this.timer);
 
       this.timing = false;
+    },
+    sectionTimingHandle() {
+      this.countdown_switch = 1;
+
+      if (!this.timing) {
+        this.beginHandle();
+      }
     },
   },
 });
